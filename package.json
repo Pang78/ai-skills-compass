@@ -6,8 +6,9 @@
     "node": ">=22.13.0"
   },
   "scripts": {
-    "dev": "vinext dev",
-    "build": "vinext build",
+    "postinstall": "node scripts/patch-vinext.js",
+    "dev": "node scripts/patch-vinext.js && vinext dev",
+    "build": "node scripts/patch-vinext.js && vinext build && node scripts/patch-vinext.js",
     "start": "vinext start",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate"
