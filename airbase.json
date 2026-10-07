@@ -1,0 +1,5 @@
+{
+  "framework": "container",
+  "handle": "vvv/courses",
+  "port": 3000
+}
