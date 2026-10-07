@@ -2,8 +2,9 @@
 FROM node:22-slim AS deps
 WORKDIR /app
 
-# Copy package manifests and install dependencies
+# Copy package manifests and patch script, then install dependencies
 COPY package.json package-lock.json ./
+COPY scripts ./scripts
 RUN npm ci
 
 # Stage 2: Build application
