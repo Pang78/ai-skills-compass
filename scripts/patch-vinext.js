@@ -56,11 +56,14 @@ function patchServerFiles() {
     // 5. Convert PARAMS & NAV inline scripts to JSON data tags
     if (content.includes('self.__VINEXT_RSC_PARAMS__=')) {
       content = content.replace(
-        /createInlineScriptTag\(\s*"self\.__VINEXT_RSC_PARAMS__="\s*\+\s*safeJsonStringify\(([^)]+)\)\s*,\s*scriptNonce\s*\)/g,
+        /createInlineScriptTag\(\s*"self\.__VINEXT_RSC_PARAMS__="\s*\+\s*safeJsonStringify\(([\s\S]*?)\)\s*,\s*scriptNonce\s*\)/g,
         '\'<script type="application/json" class="v-params">\' + safeJsonStringify($1) + \'</script>\''
       );
+      modified = true;
+    }
+    if (content.includes('self.__VINEXT_RSC_NAV__=')) {
       content = content.replace(
-        /createInlineScriptTag\(\s*"self\.__VINEXT_RSC_NAV__="\s*\+\s*safeJsonStringify\(([^)]+)\)\s*,\s*scriptNonce\s*\)/g,
+        /createInlineScriptTag\(\s*"self\.__VINEXT_RSC_NAV__="\s*\+\s*safeJsonStringify\(([\s\S]*?)\)\s*,\s*scriptNonce\s*\)/g,
         '\'<script type="application/json" class="v-nav">\' + safeJsonStringify($1) + \'</script>\''
       );
       modified = true;
