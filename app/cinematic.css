@@ -1,0 +1,120 @@
+/* A full-bleed film opening, followed by the editorial course collection. */
+html { scroll-padding-top: 88px; }
+body { background: #f3f1e8; }
+header { position: absolute; top: 0; left: 0; right: 0; z-index: 10; max-width: none; padding: 26px 5vw; border-color: #d9edc71a; color: #eff3e7; }
+header .brand-icon { background: #d9f99a; color: #15382c; }
+header nav a, header nav button { color: #bdc9b9; }
+header .nav-active { color: #eff3e7; }
+header .nav-active:after { background: #d9f99a; }
+header .header-cta { border-color: #c5d6bc44; color: #e8efdf; }
+header .header-cta:hover { color: #142a22; }
+main { max-width: none; margin: 0; }
+.cinema { height: 240svh; position: relative; background: #091713; --journey: 0; }
+.cinema-stage { height: 100svh; min-height: 680px; position: sticky; top: 0; overflow: hidden; isolation: isolate; background: radial-gradient(ellipse at 74% 48%, #233d2755, transparent 55%), #091713; color: #eff3e7; }
+.compass-scene { position: absolute; inset: 0; opacity: 0; transition: opacity 1.2s; }
+.compass-scene.is-ready { opacity: 1; }
+.compass-scene canvas { display: block; width: 100%; height: 100%; }
+.cinema-vignette { pointer-events: none; position: absolute; inset: 0; background: linear-gradient(90deg,#091713d9 0%,#09171366 36%,transparent 62%),linear-gradient(0deg,#091713 0%,transparent 22%,transparent 80%,#09171388); }
+.cinema-vignette:after { content: ''; position: absolute; inset: 0; opacity: .06; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.7' filter='url(%23n)'/%3E%3C/svg%3E"); }
+.cinema-copy { position: absolute; z-index: 2; top: 50%; transform: translateY(-43%); left: 7vw; width: 56%; max-width: 810px; }
+.cinema-kicker { display: flex; align-items: center; gap: 10px; color: #bdd59f; font-size: 9px; letter-spacing: 2.3px; }
+.cinema-kicker i { width: 5px; height: 5px; background: #d8f6aa; border-radius: 50%; box-shadow: 0 0 15px #d8f6aa; }
+.chapter-copy { animation: chapter-in .75s both; }
+.chapter-label { display: block; margin-top: 39px; font-size: 8px; letter-spacing: 2px; color: #7d9682; }
+.cinema h1 { font-size: clamp(49px, 5.7vw, 91px); font-weight: 400; letter-spacing: -.065em; line-height: 1.08; margin: 18px 0 23px; color: #eff3e7; }
+.cinema h1 em { font-family: Georgia, serif; font-weight: 400; letter-spacing: -.055em; color: #d5efaa; }
+.cinema-copy p { color: #a5b4a5; max-width: 345px; font-size: 13px; line-height: 1.9; }
+.cinema-actions { display: flex; align-items: center; gap: 26px; margin-top: 29px; }
+.cinema-cta { background: #d9f5a6; color: #152d22; border-radius: 2px; font-size: 11px; gap: 36px; padding: 17px 21px; }
+.cinema-cta:hover { background: #ecffd0; }
+.cinema-cta span { font-size: 20px; line-height: 10px; }
+.cinema-secondary { color: #d7e3cb; font-size: 10px; display: flex; gap: 16px; }
+.scene-coordinate { position: absolute; top: 130px; right: 5vw; font-family: monospace; font-size: 8px; line-height: 2; letter-spacing: 1.8px; text-align: right; color: #78917b; }
+.scene-caption { position: absolute; right: 8vw; bottom: 18%; font-size: 8px; letter-spacing: 2px; color: #9eb38d; }
+.cinema-bottom { position: absolute; bottom: 34px; left: 5vw; right: 5vw; display: flex; justify-content: space-between; align-items: center; }
+.scroll-cue { font-size: 7px; letter-spacing: 1.6px; color: #8ea18b; display: flex; align-items: center; gap: 12px; }
+.scroll-cue i { width: 1px; height: 27px; background: linear-gradient(transparent,#d2efac); transform-origin: top; animation: scroll-line 2s ease-in-out infinite; }
+.chapter-dots { display: flex; gap: 24px; }
+.chapter-dots span { font-size: 9px; color: #526956; position: relative; padding: 12px 0; transition: color .3s; }
+.chapter-dots .current { color: #d5efaa; }
+.chapter-dots .current:before { content: ''; position: absolute; bottom: 0; height: 1px; background: #d5efaa; width: 18px; }
+.motion-toggle { font-size: 8px; color: #95aa8d; padding: 10px 0; }
+.journey-progress { height: 2px; position: absolute; bottom: 0; left: 0; right: 0; transform-origin: left; transform: scaleX(var(--journey)); background: #bedc91; }
+.compass-fallback { width: 430px; height: 430px; border: 1px solid #809b5f; border-radius: 50%; position: absolute; right: 8%; top: 50%; transform: translateY(-50%) rotate(-25deg); box-shadow: inset 0 0 0 24px #9ec46b0c, 0 0 100px #b5df6522; display: grid; place-items: center; }
+.compass-fallback:before { content: ''; position: absolute; inset: 30px; border: 1px dashed #809b5f; border-radius: 50%; }
+.compass-fallback span { color: #d2eba6; font-size: 200px; }
+.providers,.catalogue,.pathway,.closing,footer { max-width: 1260px; margin-left: auto; margin-right: auto; }
+.providers { padding: 40px 0; border-top: 0; border-bottom-color: #cbd2c0; }
+.catalogue { padding-top: 94px; padding-bottom: 85px; }
+.section-head h2 { font-size: 46px; letter-spacing: -2px; margin: 17px 0; }
+.section-head .eyebrow:before { content: '01'; font-size: 10px; margin-right: 12px; color: #829064; }
+.collection-count b { font-family: Georgia, serif; font-style: italic; font-size: 58px; color: #7b8b60; }
+.course-card { border-radius: 3px; background: #fbfaf5; border-color: #d4d9c8; }
+.course-card .art { height: 235px; }
+.course-card:hover { transform: translateY(-8px); box-shadow: 0 25px 50px #203c2514; }
+.art-button .orbital,.art-button .petals,.art-button .rings,.art-button .stairs,.art-button .blocks,.art-button .codeart { scale: 1.15; transition: transform .6s, scale .6s; }
+.art-button:hover>div>div:not(.art-grid) { scale: 1.28; }
+.card-content { padding: 25px 25px 0; }
+.course-card .title-button h3 { font-size: 23px; font-weight: 500; }
+.course-card .card-content>p { font-size: 12px; }
+.course-card .card-bottom { padding: 20px 0; }
+.pathway { border-radius: 3px; background: #142b22; position: relative; overflow: hidden; padding: 65px; }
+.pathway:before { content: ''; width: 500px; height: 500px; border: 1px solid #a3bd7020; border-radius: 50%; position: absolute; left: -230px; bottom: -280px; box-shadow: 0 0 0 60px #a3bd7006,0 0 0 120px #a3bd7004; pointer-events: none; }
+.path-intro h2 { font-size: 40px; }
+.path-intro em { font-family: Georgia,serif; font-weight: 400; font-style: italic; }
+.path-card { border-radius: 3px; }
+.closing { padding: 95px 0; }
+.closing h2 { font-size: 35px; font-weight: 400; letter-spacing: -1.5px; }
+@keyframes chapter-in { from { opacity: 0; transform: translateY(17px); filter: blur(3px); } to { opacity: 1; transform: translateY(0); filter: blur(0); } }
+@keyframes scroll-line { 0%,100% { transform: scaleY(.5); opacity: .4; } 50% { transform: scaleY(1); opacity: 1; } }
+@media(min-width: 801px) { .course-grid .course-card:nth-child(3n+2) { margin-top: 32px; margin-bottom: -32px; } .catalogue-footnote { margin-top: 55px; } }
+@media(max-width: 1370px) { .providers,.catalogue,.pathway,.closing,footer { margin-left: 5vw; margin-right: 5vw; } }
+@media(max-width: 800px) {
+  .cinema { height: 210svh; }
+  .cinema-stage { min-height: 720px; }
+  .cinema-copy { width: 80%; left: 7vw; top: auto; bottom: 100px; transform: none; }
+  .cinema h1 { font-size: clamp(42px,7.5vw,62px); }
+  .cinema-kicker { font-size: 7px; letter-spacing: 1.6px; }
+  .chapter-label { margin-top: 21px; }
+  .cinema-copy p { font-size: 12px; max-width: 320px; }
+  .cinema-vignette { background: linear-gradient(0deg,#091713 3%,#091713e8 28%,#09171355 58%,transparent 80%); }
+  .scene-coordinate { top: 105px; font-size: 6px; right: 6vw; }
+  .scene-caption { display: none; }
+  .cinema-bottom { bottom: 26px; }
+  .scroll-cue { font-size: 6px; letter-spacing: .8px; }
+  .chapter-dots { gap: 14px; }
+  .compass-fallback { width: 300px; height: 300px; right: 10%; top: 30%; }
+  .compass-fallback span { font-size: 140px; }
+  .providers { padding: 30px 0; }
+  .catalogue { padding-top: 55px; }
+  .section-head h2 { font-size: 34px; }
+  .course-card .art { height: 205px; }
+  .card-content { padding: 22px 19px 0; }
+  .course-card .title-button h3 { font-size: 21px; }
+  .pathway { padding: 35px 25px; }
+  .path-intro h2 { font-size: 34px; }
+  .closing { padding: 65px 0; }
+  .closing h2 { font-size: 27px; }
+}
+@media(max-width: 480px) {
+  header { padding: 20px 5vw; }
+  .cinema-stage { min-height: 740px; }
+  .cinema-copy { bottom: 105px; width: 88%; left: 6vw; }
+  .cinema h1 { font-size: 43px; margin-top: 13px; }
+  .cinema-actions { gap: 18px; margin-top: 22px; }
+  .cinema-cta { font-size: 10px; padding: 14px; gap: 20px; }
+  .cinema-secondary { font-size: 9px; gap: 8px; }
+  .scroll-cue { max-width: 120px; line-height: 1.8; }
+  .motion-toggle { font-size: 7px; }
+  .chapter-label { font-size: 7px; }
+  .course-card .art { height: 230px; }
+  .path-intro h2 { font-size: 28px; }
+  .closing h2 { font-size: 22px; }
+}
+@media(prefers-reduced-motion: reduce) {
+  .cinema { height: auto; }
+  .cinema-stage { position: relative; }
+  .chapter-copy,.scroll-cue i { animation: none; }
+  .scroll-cue { visibility: hidden; }
+  .course-card:hover { transform: none; }
+}

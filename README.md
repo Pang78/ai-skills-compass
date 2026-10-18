@@ -6,6 +6,8 @@ development officers.
 
 ## Features
 
+- A Three.js compass with pointer response and a three-chapter scroll narrative
+- A cinematic opening with reduced-motion support and a WebGL fallback
 - Search and filter a curated collection of AI courses
 - Compare up to three courses side by side
 - Explore suggested pathways for public officers, business owners, career
